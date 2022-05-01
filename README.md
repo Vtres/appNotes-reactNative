@@ -11,10 +11,8 @@ Desenvolvido em react native para fins de estudo da tecnologia. Um app básico p
 Criando pasta + estrutura básica do projeto
 
     expo init nomeDoProjeto
-<hr />
 
 Entrega informações do sistema ao seu projeto
 
     expo install expo-constants
-<hr />
 
