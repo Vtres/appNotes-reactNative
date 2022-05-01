@@ -1,11 +1,8 @@
 # appnotes
 
-Desenvolvido em react native para fins de estudo da tecnologia. Um app básico para criar anotações rápidas. Desenvolvido usando expo, deve-se ter-lo instalado primeiro em sua máquina usando o comando.
-    
-<hr />
-    
+Desenvolvido em react native para fins de estudo da tecnologia. Um app básico para criar anotações rápidas. O projeto usa expo na sua criação e teste, expo deve ser instalado primeiro em sua máquina usando o comando.
+        
     npm install -g expo-cli
-<hr />
 
 ## Comandos para criação da aplicação
 Criando pasta + estrutura básica do projeto
