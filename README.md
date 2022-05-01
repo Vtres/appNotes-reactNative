@@ -13,3 +13,8 @@ Criando pasta + estrutura básica do projeto
     expo init nomeDoProjeto
 <hr />
 
+Entrega informações do sistema ao seu projeto
+
+    expo install expo-constants
+<hr />
+
