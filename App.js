@@ -8,8 +8,7 @@ export default function App() {
     <ScrollView style={{ backgroundColor: '#d8dfe6', marginTop: Constants.statusBarHeight }}> 
       <View style={styles.container}>
         <StatusBar backgroundColor="#d8dfe6" translucent />
-        <Text>Open up App.js to start working on your app!</Text>
-       
+        <Text>tudo ok</Text>    
       </View>
     </ScrollView>
   );
