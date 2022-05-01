@@ -8,6 +8,7 @@ Desenvolvido em react native para fins de estudo da tecnologia. Um app básico p
 <hr />
 
 ## Comandos para criação da aplicação
+Criando pasta + estrutura básica do projeto
 
     expo init nomeDoProjeto
 <hr />
