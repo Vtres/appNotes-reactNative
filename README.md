@@ -13,3 +13,7 @@ Entrega informações do sistema ao seu projeto
 
     expo install expo-constants
 
+Entrega a utilização do AsyncStorage
+
+    expo install @react-native-async-storage/async-storage
+

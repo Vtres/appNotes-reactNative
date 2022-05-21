@@ -7,8 +7,9 @@ import {
   TouchableOpacity,
   Text,
   Dimensions,
-  TextInput
+  TextInput,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Header from './components/Header';
 import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
@@ -18,9 +19,29 @@ const App = () => {
   const [estado, setEstado] = useState('leitura')
   const [anotacao, setAnotacao] = useState('')
 
+  setData = async()=>{
+    try {
+      await AsyncStorage.setItem('@storage_Key', anotacao)
+    } catch (error) {
+      
+    }
+  }
+
   const atualizarTexto = () => {
     setEstado('leitura')
+    setData()
   }
+
+  useEffect(()=>{
+    (async ()=>{
+      try {
+        const anotacaoStorage = await AsyncStorage.getItem('@storage_Key')
+        setAnotacao(anotacaoStorage)
+      } catch (error) {
+        
+      }
+    })()
+  },[])
   if (estado == 'leitura') {
     return (
       <SafeAreaView style={styles.container}>
@@ -60,7 +81,7 @@ const App = () => {
         <StatusBar style='light' />
         <View style={styles.container}>
           <Header style={styles.header} titulo='anotações'></Header>
-          <TextInput onChangeText={(text) => setAnotacao(text)} multiline={true} style={styles.textStyle} numberOfLines={5} value={anotacao}></TextInput>
+          <TextInput autoFocus={true} onChangeText={(text) => setAnotacao(text)} multiline={true} style={styles.textStyle} numberOfLines={5} value={anotacao}></TextInput>
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={() => atualizarTexto()}
